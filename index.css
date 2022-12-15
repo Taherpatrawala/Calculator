@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+:root{
+    --gradient:linear-gradient(to right, crimson, rgb(36, 79, 250),rgb(231, 76, 221), yellow);
+}
+
+body{
+    margin: 0;
+    background-color: black;
+   
+}
+
+
+.input{
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 1.3rem;
+    outline: none;
+    margin-top: 5rem;
+    width: 33vw;
+    height: 10vh;
+    border: solid;
+    --border-width: 0.23rem;
+    border-radius: calc(10% - var(--border-width) );
+    font-family: 'Nunito', sans-serif;
+    font-size: large;
+    font-weight: 300;
+    background-color: transparent;
+    color: aliceblue;
+    border-color: rgb(65, 65, 65);
+}
+
+.buttons{
+    max-width: 35vw;
+    max-height: 35vw;
+    margin: auto;
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 0.35rem;
+    row-gap: 0.35rem;
+    
+}
+
+.button{
+    font-size: large;
+    font-family: 'Nunito', sans-serif;
+    --border-radius: 10px;
+    padding: 1rem;
+    background: var(--gradient);
+    cursor:pointer;
+    transition: background-color 0.3s , color 0.3s;
+    color: rgb(255, 255, 255);
+    position: relative;
+    border: none;
+    --border-width:3px;
+    border-radius: var(--border-radius);
+    z-index: 1;
+
+}
+
+.button::before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: calc(100% - calc(var(--border-width)*2));
+    width: calc(100% - calc(var(--border-width)*2));
+    background: rgb(0, 0, 0);
+    top: calc(var(--border-width));
+    left:  calc(var(--border-width));
+    border-radius: calc(var(--border-radius) - var(--border-width));
+    z-index: -1;
+}
+
+
+.equal-button{
+    font-size: large;
+    font-family: 'Nunito', sans-serif;
+    --border-radius: 10px;
+    padding: 1rem;
+    background: var(--gradient);
+    cursor:pointer;
+    transition: background-color 0.3s , color 0.3s;
+    color: rgb(255, 255, 255);
+    position: relative;
+    border: none;
+    --border-width:3px;
+    border-radius: var(--border-radius);
+    z-index: 1;
+
+}
+
+
+.equal-button::before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    height: calc(100% - calc(var(--border-width)*2));
+    width: calc(100% - calc(var(--border-width)*2));
+    background: rgb(0, 0, 0);
+    top: calc(var(--border-width));
+    left:  calc(var(--border-width));
+    border-radius: calc(var(--border-radius) - var(--border-width));
+    z-index: -1;
+}
+
+#del-button{
+     padding: 0.63rem;
+}
+
+
+.del-button-svg{
+    margin-bottom: -3px;
+    height: 30px;
+    width: 30px;
+}
